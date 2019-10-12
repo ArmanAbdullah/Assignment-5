@@ -1,0 +1,15 @@
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\obj\Debug\netcoreapp3.0\Library.User.csprojAssemblyReference.cache
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\obj\Debug\netcoreapp3.0\Library.User.AssemblyInfoInputs.cache
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\obj\Debug\netcoreapp3.0\Library.User.AssemblyInfo.cs
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\bin\Debug\netcoreapp3.0\Library.User.exe
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\bin\Debug\netcoreapp3.0\Library.Core.dll
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\bin\Debug\netcoreapp3.0\Library.Core.pdb
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\obj\Debug\netcoreapp3.0\Library.User.csproj.CopyComplete
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\bin\Debug\netcoreapp3.0\Library.User.deps.json
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\bin\Debug\netcoreapp3.0\Library.User.runtimeconfig.json
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\bin\Debug\netcoreapp3.0\Library.User.runtimeconfig.dev.json
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\bin\Debug\netcoreapp3.0\Library.User.dll
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\bin\Debug\netcoreapp3.0\Library.User.pdb
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\obj\Debug\netcoreapp3.0\Library.User.dll
+C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.User\obj\Debug\netcoreapp3.0\Library.User.pdb
