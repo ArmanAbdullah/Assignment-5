@@ -51,7 +51,7 @@ namespace Library.Library.Service
             //var book = context.BookInfos.Where(x => x.barcode == bookbarcode).Single();
 
             issue.returnDate = DateTime.UtcNow;
-
+            _issueRepository.Save();
             DateTime issDate = Convert.ToDateTime(issue.returnDate);
 
             TimeSpan diff = issDate - issue.issueDate;

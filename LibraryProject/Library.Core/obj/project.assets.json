@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\LibraryProject\\Library.Core\\Library.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\Assignment-5\\LibraryProject\\Library.Core\\Library.Core.csproj",
       "projectName": "Library.Core",
-      "projectPath": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\LibraryProject\\Library.Core\\Library.Core.csproj",
+      "projectPath": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\Assignment-5\\LibraryProject\\Library.Core\\Library.Core.csproj",
       "packagesPath": "C:\\Users\\Arman Abdullah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\LibraryProject\\Library.Core\\obj\\",
+      "outputPath": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\Assignment-5\\LibraryProject\\Library.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

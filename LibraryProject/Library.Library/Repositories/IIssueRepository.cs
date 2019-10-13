@@ -9,7 +9,7 @@ namespace Library.Library.Repository
     public interface IIssueRepository
     {
         void IssueABook(Issue issue);
-        
+        void Save();
         Issue GetIssueDataByStnIdNBarcode(int StnId, string bookBarcode);
     }
 }

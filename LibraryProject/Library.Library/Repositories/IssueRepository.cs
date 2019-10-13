@@ -27,6 +27,10 @@ namespace Library.Library.Repository
             var issue = context.IssueBooks.Where(x => x.bookBarcode == bookBarcode && x.StudentID == StnId).FirstOrDefault();
             return issue;
         }
-        
+
+        public void Save()
+        {
+            context.SaveChanges();
+        }
     }
 }

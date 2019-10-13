@@ -4890,11 +4890,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\LibraryProject\\Library.Library\\Library.Library.csproj",
+      "projectUniqueName": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\Assignment-5\\LibraryProject\\Library.Library\\Library.Library.csproj",
       "projectName": "Library.Library",
-      "projectPath": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\LibraryProject\\Library.Library\\Library.Library.csproj",
+      "projectPath": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\Assignment-5\\LibraryProject\\Library.Library\\Library.Library.csproj",
       "packagesPath": "C:\\Users\\Arman Abdullah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\LibraryProject\\Library.Library\\obj\\",
+      "outputPath": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\Assignment-5\\LibraryProject\\Library.Library\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4913,8 +4913,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\LibraryProject\\Library.Core\\Library.Core.csproj": {
-              "projectPath": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\LibraryProject\\Library.Core\\Library.Core.csproj"
+            "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\Assignment-5\\LibraryProject\\Library.Core\\Library.Core.csproj": {
+              "projectPath": "C:\\Users\\Arman Abdullah\\Desktop\\Library Project\\Assignment-5\\LibraryProject\\Library.Core\\Library.Core.csproj"
             }
           }
         }
