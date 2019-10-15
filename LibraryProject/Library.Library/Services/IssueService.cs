@@ -9,21 +9,19 @@ namespace Library.Library.Service
 {
     public class IssueService : IIssueService
     {
-        private IIssueRepository _issueRepository;
-        private IStudentRepository _studentRepository;
-        private IBookRepository _bookRepository;
-        public IssueService(IIssueRepository issueRepository, IStudentRepository studentRepository, IBookRepository bookRepository)
+        private IssueUnitOfWork _issueUnitOfWork;
+        private ReturnUnitOfWork _returnUnitOfWork;
+        public IssueService(IssueUnitOfWork issueUnitOfWork, ReturnUnitOfWork returnUnitOfWork)
         {
-            _issueRepository = issueRepository;
-            _studentRepository = studentRepository;
-            _bookRepository = bookRepository;
+            _issueUnitOfWork = issueUnitOfWork;
+            _returnUnitOfWork = returnUnitOfWork;
         }
 
         public void BookIssue(string[] informations)
         {
             var stnId = Convert.ToInt32(informations[0]);
             var barCode = informations[1];
-            var book = _bookRepository.GetBookInfoUsingBarcode(barCode);
+            var book = _issueUnitOfWork.bookRepository.GetBookInfoUsingBarcode(barCode);
             if (book.copyCount > 0)
             {
                 DateTime? date = null;
@@ -35,9 +33,9 @@ namespace Library.Library.Service
                     issueDate = new DateTime(2019, 9, 20),
                     returnDate = date
                 };
-
-
-                _issueRepository.IssueABook(issue);
+                _issueUnitOfWork.issueRepository.IssueABook(issue);
+                book.copyCount--;
+                _issueUnitOfWork.Save();
             }
         }
         public void BookReturn(string[] imformations)
@@ -46,12 +44,13 @@ namespace Library.Library.Service
             int Id = Convert.ToInt32(imformations[0]);
             var barCode = imformations[1];
 
-            var stu = _studentRepository.GetStudentById(Id);
-            var issue = _issueRepository.GetIssueDataByStnIdNBarcode(Id, barCode);
-            //var book = context.BookInfos.Where(x => x.barcode == bookbarcode).Single();
+            var stu = _returnUnitOfWork.studentRepository.GetStudentById(Id);
+            var issue = _returnUnitOfWork.issueRepository.GetIssueDataByStnIdNBarcode(Id, barCode);
+            var book = _returnUnitOfWork.bookRepository.GetBookInfoUsingBarcode(barCode);
 
             issue.returnDate = DateTime.UtcNow;
-            _issueRepository.Save();
+            book.copyCount++;
+            _returnUnitOfWork.bookRepository.GetBookInfoUsingBarcode(barCode); 
             DateTime issDate = Convert.ToDateTime(issue.returnDate);
 
             TimeSpan diff = issDate - issue.issueDate;
@@ -61,7 +60,8 @@ namespace Library.Library.Service
             {
                 stu.fineAmount =stu.fineAmount+( (days - 7) * 10);
             }
-            _studentRepository.UpdateFineAmount(stu.Id, stu.fineAmount);
+            _returnUnitOfWork.studentRepository.UpdateFineAmount(stu.Id, stu.fineAmount);
+            _returnUnitOfWork.Save();
         }
 
 
