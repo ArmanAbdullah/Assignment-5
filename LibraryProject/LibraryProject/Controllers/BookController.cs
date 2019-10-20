@@ -18,6 +18,7 @@ namespace LibraryProject.Controllers
         {
             _bookService = bookService;
         }
+
         // GET: api/<controller>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -33,16 +34,11 @@ namespace LibraryProject.Controllers
         }
 
         // POST api/<controller>
-        [HttpPost]
-        public void Post([FromBody]BookInfo bookInfo)
+        [HttpPost("/api/Book/AddBook")]
+        public void AddBook([FromBody]BookInfo bookInfo)
         {
-
-
             _bookService.SetBookInfo(bookInfo);
-
-
         }
-
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]

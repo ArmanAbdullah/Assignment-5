@@ -36,13 +36,14 @@ namespace LibraryProject.Controllers
         public void Post([FromBody]string value)
         {
         }
+
         [HttpPost("/api/Report/checkFine")]
         public float checkFine([FromBody]int id)
         {
-
             float fine = _reportService.checkFine(id);
             return fine;
         }
+
         [HttpPost("/api/Report/payFine")]
         public void payFine([FromBody]string[] id)
         {

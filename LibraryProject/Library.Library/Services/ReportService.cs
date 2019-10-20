@@ -8,31 +8,33 @@ namespace Library.Library.Service
 {
     public class ReportService : IReportService
     {
-        private IStudentRepository _studentRepository;
-        public ReportService(IStudentRepository studentRepository)
+        private UnitOfWork _unitOfWork;
+        public ReportService(UnitOfWork unitOfWork)
         {
-            _studentRepository = studentRepository;
+            _unitOfWork = unitOfWork;
         }
 
         int _stnId = 0;
-        string[] _info;
 
         public float checkFine(int stnId)
         {
             _stnId = stnId;
-            var stu = _studentRepository.GetStudentById(stnId);
+            var stu = _unitOfWork.studentRepository.GetStudentById(stnId);
             return stu.fineAmount;
         }
 
-
         public void payFine(string[] info)
         {
-            _info = info;
-            int stnId = Convert.ToInt32(_info[0]);
-            int FineAmount = Convert.ToInt32(_info[1]);
-            var stu = _studentRepository.GetStudentById(stnId);
-            stu.fineAmount -= FineAmount;
-            _studentRepository.UpdateFineAmount(stnId, stu.fineAmount);
+            int stnId = Convert.ToInt32(info[0]);
+            int paidAmount = Convert.ToInt32(info[1]);
+            var stu = _unitOfWork.studentRepository.GetStudentById(stnId);
+            stu.fineAmount -= paidAmount;
+            if (stu.fineAmount > 0)
+            {
+                _unitOfWork.studentRepository.UpdateFineAmount(stnId, stu.fineAmount);
+            }
+            else
+                throw new InvalidOperationException("Paid amount is greater than payable amount");
         }
     }
 }

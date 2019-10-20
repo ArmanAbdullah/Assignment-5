@@ -11,8 +11,6 @@ namespace Library.Library.Repository
     public class BookRepository : IBookRepository
     {
         LibraryContext context;
-
-
         public BookRepository(LibraryContext _context)
         {
             context = _context;
@@ -20,11 +18,6 @@ namespace Library.Library.Repository
 
         public void AddBookInfo(BookInfo bookInfo)
         {
-
-            //BookService bookService = new BookService();
-            //BookInfo _bookInfo = bookService.GetBook();
-
-
             context.BookInfos.Add(bookInfo);
             context.Database.OpenConnection();
             try

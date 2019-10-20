@@ -10,14 +10,13 @@ namespace Library.Library.Repository
     public class IssueRepository : IIssueRepository
     {
         LibraryContext context;
-
         public IssueRepository(LibraryContext _context)
         {
             context = _context;
         }
+
         public void IssueABook(Issue issue)
         {
-
             context.IssueBooks.Add(issue);
             context.SaveChanges();
         }

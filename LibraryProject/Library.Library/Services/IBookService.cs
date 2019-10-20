@@ -8,7 +8,6 @@ namespace Library.Library.Service
 {
     public interface IBookService
     {
-        //string[] HaveBookInfo(string[] arr);
         void SetBookInfo(BookInfo bookInfo);
     }
 }

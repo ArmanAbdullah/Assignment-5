@@ -33,12 +33,8 @@ namespace Library.User
             {
                 requestStream.Write(data, 0, data.Length);
                 requestStream.Flush();
-
                 request.GetResponse();
-                
             }
-
-
         }
     }
 }

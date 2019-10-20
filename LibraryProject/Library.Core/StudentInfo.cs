@@ -10,10 +10,7 @@ namespace Library.Core
         public int Id { get; set; }
         public string name { get; set; }
         public float fineAmount { get; set; }
-
         public IList<Issue> IssueBooks { get; set; }
-        //public IList<ReturnBook> ReturnBooks { get; set; }
-
         public StudentInfo()
         {
             fineAmount = 0;

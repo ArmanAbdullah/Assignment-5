@@ -16,6 +16,7 @@ namespace LibraryProject.Controllers
         {
             _issueService = issueService;
         }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -30,19 +31,16 @@ namespace LibraryProject.Controllers
             return "value";
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string[] value)
+        // POST api/Issue/IssueBook
+        [HttpPost("/api/Issue/IssueBook")]
+        public void IssueBook([FromBody]string[] value)
         {
-
-
             _issueService.BookIssue(value);
-
-
         }
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string[] value)
+
+        // PUT api/Issue/ReturnBook
+        [HttpPut("/api/Issue/ReturnBook")]
+        public void ReturnBook(int id, [FromBody] string[] value)
         {
             _issueService.BookReturn(value);
         }

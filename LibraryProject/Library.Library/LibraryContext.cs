@@ -11,7 +11,6 @@ namespace Library.Library
     {
         private string _connectionString;
         private string _migrationAssemblyName;
-
         public LibraryContext(string connectionString, string migrationAssemblyName)
         {
             _connectionString = connectionString;

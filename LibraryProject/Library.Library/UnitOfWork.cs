@@ -5,21 +5,19 @@ using System.Text;
 
 namespace Library.Library
 {
-    public class IssueUnitOfWork
+    public class UnitOfWork
     {
         private LibraryContext _context;
-
         public IBookRepository bookRepository { get; private set; }
         public IIssueRepository issueRepository { get; private set; }
-        
-
-        public IssueUnitOfWork(string connectionString, string migrationAssemblyName)
+        public IStudentRepository studentRepository { get; private set; }
+        public UnitOfWork(string connectionString, string migrationAssemblyName)
         {
             _context = new LibraryContext(connectionString, migrationAssemblyName);
 
             bookRepository = new BookRepository(_context);
             issueRepository = new IssueRepository(_context);
-            
+            studentRepository=new StudentRepository(_context);
         }
 
         public void Save()

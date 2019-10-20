@@ -10,14 +10,13 @@ namespace Library.Library.Repository
     public class StudentRepository : IStudentRepository
     {
         LibraryContext context;
-
         public StudentRepository(LibraryContext _context)
         {
             context = _context;
         }
+
         public void AddStudentInfo(StudentInfo studentInfo)
         {
-
             context.StudentInfos.Add(studentInfo);
             context.Database.OpenConnection();
             try

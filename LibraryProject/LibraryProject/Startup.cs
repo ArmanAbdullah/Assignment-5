@@ -39,11 +39,9 @@ namespace LibraryProject
                 .AddTransient<IIssueRepository, IssueRepository>()
                 .AddTransient<IIssueService, IssueService>()
                 .AddTransient<IReportService, ReportService>()
-                .AddTransient<IssueUnitOfWork>(x => new IssueUnitOfWork(connectionString, migrationAssemblyName))
-                .AddTransient<ReturnUnitOfWork>(x => new ReturnUnitOfWork(connectionString, migrationAssemblyName))
+                .AddTransient<UnitOfWork>(x => new UnitOfWork(connectionString, migrationAssemblyName))
                 .AddTransient<LibraryContext>(x => new LibraryContext(connectionString, migrationAssemblyName));
-                
-
+         
             services.AddDbContext<LibraryContext>(x => x.UseSqlServer(connectionString, m => m.MigrationsAssembly(migrationAssemblyName)));
             services.AddControllers();
         }

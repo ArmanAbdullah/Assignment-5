@@ -16,9 +16,6 @@ namespace Library.User
             arr[0] = Console.ReadLine();
             Console.Write("Enter book barcode:");
             arr[1] = Console.ReadLine();
-
-
-
             const string url = "https://localhost:44332/api/Issue";
             var request = WebRequest.Create(url);
             request.Method = "POST";
@@ -34,11 +31,7 @@ namespace Library.User
 
                 request.GetResponse();
             }
-
-
-
-            //var b = context.IssueBooks.Where(x => x.bookBarcode == bookInfo.barcode && x.StudentID == studentInfo.Id).FirstOrDefault();
-        }
+}
         public static void ReturnABook()
         {
             var arr = new string[2];
@@ -46,7 +39,6 @@ namespace Library.User
             arr[0] = Console.ReadLine();
             Console.Write("Enter book barcode:");
             arr[1] = Console.ReadLine();
-
             const string url = "https://localhost:44332/api/Issue/5";
             var request = WebRequest.Create(url);
             request.Method = "PUT";
@@ -54,18 +46,12 @@ namespace Library.User
             var requestContent = JsonConvert.SerializeObject(arr);
             var data = Encoding.UTF8.GetBytes(requestContent);
             request.ContentLength = data.Length;
-
             using (var requestStream = request.GetRequestStream())
             {
                 requestStream.Write(data, 0, data.Length);
                 requestStream.Flush();
-
                 request.GetResponse();
             }
-
-
-
-
         }
     }
 }

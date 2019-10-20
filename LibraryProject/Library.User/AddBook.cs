@@ -16,7 +16,6 @@ namespace Library.User
             string bookId = Console.ReadLine();
             Console.Write("Please enter book title:");
             string bookTitle = Console.ReadLine();
-
             Console.Write("Please enter author name:");
             string bookAuthor = Console.ReadLine();
             Console.Write("Please enter edition:");
@@ -39,16 +38,13 @@ namespace Library.User
             var request = WebRequest.Create(url);
             request.Method = "POST";
             request.ContentType = "application/json";
-
             var requestContent = JsonConvert.SerializeObject(book);
             var data = Encoding.UTF8.GetBytes(requestContent);
             request.ContentLength = data.Length;
-
             using (var requestStream = request.GetRequestStream())
             {
                 requestStream.Write(data, 0, data.Length);
                 requestStream.Flush();
-
                 request.GetResponse();
             }
         }

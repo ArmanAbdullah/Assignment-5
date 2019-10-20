@@ -10,22 +10,17 @@ namespace Library.Library.Service
 {
     public class StudentService : IStudentService
     {
-        private IStudentRepository _studentRepository;
-        public StudentService(IStudentRepository studentRepository)
+        private UnitOfWork _unitOfWork;
+        public StudentService(UnitOfWork unitOfWork)
         {
-            _studentRepository = studentRepository;
+            _unitOfWork = unitOfWork;
         }
-        StudentInfo _studentInfo = new StudentInfo();
 
+        StudentInfo _studentInfo = new StudentInfo();
         public void SetStudentInfo(StudentInfo student)
         {
-
-
-            
             _studentInfo = student;
-            _studentRepository.AddStudentInfo(_studentInfo);
+            _unitOfWork.studentRepository.AddStudentInfo(_studentInfo);
         }
-
-
     }
 }

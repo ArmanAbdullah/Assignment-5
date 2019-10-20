@@ -25,7 +25,6 @@ namespace Library.User
             {
                 requestStream.Write(data, 0, data.Length);
                 requestStream.Flush();
-
                 using (var response = request.GetResponse())
                 {
                     using (var streamItem = response.GetResponseStream())
@@ -33,10 +32,8 @@ namespace Library.User
                         using (var reader = new StreamReader(streamItem))
                         {
                             var result = reader.ReadToEnd();
-                            //Console.WriteLine(result);
                             dynamic item = JsonConvert.DeserializeObject(result);
                             Console.WriteLine("Fine:" + item);
-
                         }
                     }
                 }

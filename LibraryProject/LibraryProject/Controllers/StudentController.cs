@@ -19,6 +19,7 @@ namespace LibraryProject.Controllers
         {
             _studentService = studentService;
         }
+
         // GET: api/<controller>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -34,8 +35,8 @@ namespace LibraryProject.Controllers
         }
 
         // POST api/<controller>
-        [HttpPost]
-        public void Post([FromBody]StudentInfo student)
+        [HttpPost("/api/Student/AddStudent")]
+        public void AddStudent([FromBody]StudentInfo student)
         {
             _studentService.SetStudentInfo(student);
         }

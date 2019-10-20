@@ -6,3 +6,11 @@ C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.Core\obj\
 C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.Core\obj\Debug\netcoreapp3.0\Library.Core.AssemblyInfo.cs
 C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.Core\obj\Debug\netcoreapp3.0\Library.Core.dll
 C:\Users\Arman Abdullah\Desktop\Library Project\LibraryProject\Library.Core\obj\Debug\netcoreapp3.0\Library.Core.pdb
+C:\Users\Arman Abdullah\Desktop\Library Project\Assignment-5\LibraryProject\Library.Core\bin\Debug\netcoreapp3.0\Library.Core.deps.json
+C:\Users\Arman Abdullah\Desktop\Library Project\Assignment-5\LibraryProject\Library.Core\bin\Debug\netcoreapp3.0\Library.Core.dll
+C:\Users\Arman Abdullah\Desktop\Library Project\Assignment-5\LibraryProject\Library.Core\bin\Debug\netcoreapp3.0\Library.Core.pdb
+C:\Users\Arman Abdullah\Desktop\Library Project\Assignment-5\LibraryProject\Library.Core\obj\Debug\netcoreapp3.0\Library.Core.csprojAssemblyReference.cache
+C:\Users\Arman Abdullah\Desktop\Library Project\Assignment-5\LibraryProject\Library.Core\obj\Debug\netcoreapp3.0\Library.Core.AssemblyInfoInputs.cache
+C:\Users\Arman Abdullah\Desktop\Library Project\Assignment-5\LibraryProject\Library.Core\obj\Debug\netcoreapp3.0\Library.Core.AssemblyInfo.cs
+C:\Users\Arman Abdullah\Desktop\Library Project\Assignment-5\LibraryProject\Library.Core\obj\Debug\netcoreapp3.0\Library.Core.dll
+C:\Users\Arman Abdullah\Desktop\Library Project\Assignment-5\LibraryProject\Library.Core\obj\Debug\netcoreapp3.0\Library.Core.pdb
